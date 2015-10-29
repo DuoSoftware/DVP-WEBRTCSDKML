@@ -145,6 +145,11 @@ function fullScreen(b_fs) {
 
 var Test =
 {
+SendMsg: function(){
+
+    sendMessage(document.getElementById("txtUser").value,document.getElementById("txtmsg").value);
+
+},
 
     SetStatus: function () {
 
@@ -181,7 +186,12 @@ var Test =
 
     },
     onReceiveMessage: function (e) {
-        alert("onReceiveMessage");
+
+        //console.info('SMS-content = ' + e.getContentString() + ' and SMS-content-type = ' + e.getContentType());
+        document.getElementById("txtmsgr").innerHTML=e.getContentString();
+
+        document.getElementById("txtmsgr").value=e.getContentString();
+
     },
 
 

@@ -116,7 +116,6 @@ function eventsListener(e) {
         {
 			publishPresence('Offline','Offline', 'eventsListener');
 			UserEvent.onEventsListener(e);
-            UserEvent = null;
             sipStack = null;
             registerSession = null;
             callSession = null;

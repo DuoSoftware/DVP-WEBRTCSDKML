@@ -226,8 +226,8 @@
                     </tr>
                     <tr>
                         <td colspan="2">
-                            <input type="button" class="btn btn-success" id="btnRegister" value="LogIn" onclick="Test.SipRegisterUA();"><input type="button" class="btn btn-danger" id="btnUnRegister" value="LogOut" onclick="    Test.SipUnRegisterUA()" disabled=""><input type="button" class="btn btn-danger" id="btnSetStatus" value="Set Status" onclick="    Test.SetStatus()" ><input type="button" class="btn btn-danger" id="btnSubscribe" value="Subscribe" onclick="    Test.Subscribe()" ></td>
-							<td><input type="button" class="btn btn-danger" id="btnUnRegister1" value="LogOutNew" onclick="    Test.SipUnRegisterUA()" ></td>
+                            <input type="button" class="btn btn-success" id="btnRegister" value="LogIn" onclick="Test.SipRegisterUA();"><input type="button" class="btn btn-danger" id="btnUnRegister" value="LogOut" onclick="    Test.SipUnRegisterUA()" ><input type="button" class="btn btn-danger" id="btnSetStatus" value="Set Status" onclick="    Test.SetStatus()" ><input type="button" class="btn btn-danger" id="btnSubscribe" value="Subscribe" onclick="    Test.Subscribe()" ></td>
+							
                     </tr>
                 </tbody></table>
             </div>
@@ -245,19 +245,44 @@
                     </tr>
                     <tr>
                         <td colspan="1" align="right">
-                            <div class="btn-toolbar" style="margin: 0; vertical-align:middle">
+                            <div class="btn-toolbar" style="margin: 0; vertical-align: middle">
                                 <!--div class="btn-group">
-                                    <input type="button" id="btnBFCP" style="margin: 0; vertical-align:middle; height: 100%;" class="btn btn-primary" value="BFCP" onclick='sipShareScreen();' disabled />
+                                <input type="button" id="btnBFCP" style="margin: 0; vertical-align:middle; height: 100%;" class="btn btn-primary" value="BFCP" onclick='sipShareScreen();' disabled/>
                                 </div-->
                                 <div id="divBtnCallGroup" class="btn-group">
                                 </div>&nbsp;&nbsp;
                                 <div class="btn-group">
                                     <input type="button" class="btn btn-primary" id="btnAnswer" value="Answer" onclick="Test.AnswerCall();">
                                     <input type="button" class="btn btn-primary" id="btnCallTest" value="Call" onclick="Test.MakeMyCall();">
-                                    <input type="button" id="btnHangUp" style="margin: 0; vertical-align: middle; height: 100%;" class="btn btn-primary" value="HangUp" onclick="Test.EndCalls();" >
+                                    <input type="button" id="btnHangUp" style="margin: 0; vertical-align: middle; height: 100%;" class="btn btn-primary" value="HangUp" onclick="Test.EndCalls();">
                                 </div>
-                             </div>
+                            </div>
                         </td>
+                    </tr>
+                    <tr>
+                        <table style="width: 100%;">
+                            <tr>
+                                <td>&nbsp;</td>
+                                <td><input type="text" style="width: 100%; height: 100%" id="txtmsgr" value="" readonly="true"></td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><input type="text" style="width: 100%; height: 100%" id="txtmsg" value=""></td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><input type="text" style="width: 100%; height: 100%" id="txtUser" value=""></td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>&nbsp;</td>
+                                <td><input type="button" class="btn btn-primary" id="Button1" value="Send Msg" onclick="Test.SendMsg();"></td>
+                                <td>&nbsp;</td>
+                            </tr>
+
+                        </table>
                     </tr>
                     <tr>
                         <td id="tdVideo"  style="height: 400px; width:400px">
