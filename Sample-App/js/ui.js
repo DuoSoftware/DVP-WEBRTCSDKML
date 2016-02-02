@@ -412,7 +412,7 @@ SendMsg: function(){
         //alert("No : " + document.getElementById('txtPhoneNumber').value);
         //videoLocalElementId, videoRemoteElementId, audioRemoteId, user
         //CallType{ call-screenshare, call-audiovideo, audio}
-        makeCall(document.getElementById('txtPhoneNumber').value, CallType.audio);
+        makeCall(document.getElementById('txtPhoneNumber').value, CallType.video);
 
 
     },
