@@ -327,6 +327,12 @@ var duoWebPhone = {
         }
     },
 
+	HangUp: function () {
+        if (callSession) {
+            callSession.hangup({events_listener: {events: '*', listener: SipEventSession}});
+        }
+    },
+	
     acceptCall: function () {
 
         callSession.accept(ConfigCall); // e.newSession.reject() to reject the call
