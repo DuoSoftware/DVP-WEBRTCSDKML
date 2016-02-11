@@ -145,6 +145,7 @@ function fullScreen(b_fs) {
 
 var Test =
 {
+
 SendMsg: function(){
 
     sendMessage(document.getElementById("txtUser").value,document.getElementById("txtmsg").value);
