@@ -4,27 +4,27 @@
 
  - Initialize the Phone. 
   -     This is the first function to call in order to initialize the media and signaling engines.
-      ```javascript
+    ```javascript
     duoWebPhone.SipRegister(userProfile, UserEvent,config);
-    
+        
     // call back function.
-    var    onEventsListener= function (e) {
-        if(e.type == 'connected'){ 
-            alert("successful logged");
-        }
-    };
+    var onEventsListener= function (e) {
+            if(e.type == 'connected'){ 
+                alert("successful logged");
+            }
+        };
     ```
   
    - Making/receiving audio/video calls
         -    Make call: 
                 ```javascript
                 duoWebPhone.makeCall(number,CallType.video);
-                
+                                
                 // call back function
                 var onSipEventSession= function (e) {
                     if(e.type == 'connected'){ 
                         alert("Call Connected.");
-                        }
+                    }
                 };
                 ```
           - Accept call:
