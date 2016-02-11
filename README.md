@@ -13,24 +13,24 @@
                 alert("successful logged");
             }
         };
-    ```
+     ```
   
    - Making/receiving audio/video calls
         -    Make call: 
-                ```javascript
+        
+              ```javascript
                 duoWebPhone.makeCall(number,CallType.video);
-                                
                 // call back function
                 var onSipEventSession= function (e) {
                     if(e.type == 'connected'){ 
                         alert("Call Connected.");
                     }
                 };
-                ```
+              ```
           - Accept call:
-            ```javascript
+          ```javascript
             duoWebPhone.acceptCall();
-            ```
+          ```
           
           - Reject call:
             ```javascript
