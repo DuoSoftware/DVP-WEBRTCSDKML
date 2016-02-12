@@ -25,7 +25,6 @@ var messageSession;
 
 
 function readyCallback(e) {
-
     this.createSipStack();
 }
 
@@ -429,7 +428,18 @@ var duoWebPhone = {
         messageSession.send(user, message, 'text/plain;charset=utf-8');
     },
 
-
+    uiVideoDisplayShowHide: function (b_show) {
+        var o_elt_video = showLocal ? VideoLocalElement : VideoRemoteElement;
+        if (b_show) {
+            o_elt_video.style.height = '340px';
+            o_elt_video.style.height = navigator.appName == 'Microsoft Internet Explorer' ? '100%' : '340px';
+        }
+        else {
+            o_elt_video.style.height = '0px';
+            o_elt_video.style.height = '0px';
+        }
+        /*btnFullScreen.disabled = !b_show;*/
+    },
     ShowVideo: function (showLocal, showRemote) {
         var o_elt_video = showLocal ? VideoLocalElement : VideoRemoteElement;
 
@@ -448,7 +458,7 @@ var duoWebPhone = {
             else {
                 o_elt_video.style.opacity = 1;
             }
-            uiVideoDisplayShowHide(true);
+            this.uiVideoDisplayShowHide(true);
         }
         else {
             if (isWebRtc4AllSupported()) {
@@ -467,6 +477,7 @@ var duoWebPhone = {
             this.fullScreen(false);
         }
     },
+
 
     fullScreen: function (isFullScreen) {
 
@@ -490,7 +501,7 @@ var duoWebPhone = {
                 // divVideo.setAttribute("class", isFullScreen ? "full-screen" : "normal-screen");
             }
         }
-    }
+    },
 
 };
 
