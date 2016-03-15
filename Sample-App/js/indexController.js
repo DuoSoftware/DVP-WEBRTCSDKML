@@ -89,6 +89,10 @@ app.controller('MainController', function ($scope, $mdDialog, $mdMedia, $log,$lo
         phoneHandler.makeCall(call.number,configurations);
     };
 
+    $scope.hangUp = function (call) {
+              phoneHandler.hangUp();
+    };
+
     $scope.call = {};
     $scope.profile = {
         authorizationName:"1005",

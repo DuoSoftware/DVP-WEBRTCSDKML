@@ -2,13 +2,15 @@
 <html lang="en">
 <head>
     <link rel='stylesheet prefetch' href='bower_components/angular-material/angular-material.css'>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
     <meta charset="UTF-8">
     <title></title>
 </head>
 <body ng-app="DuoSoftPhone" ng-controller="MainController">
 <span class="md-headline" id="statusMsg"></span>
 
-<div ng-cloak>
+<div ng-cloak >
     <md-content class="md-padding" layout-xs="column" layout="row">
         <div flex-xs flex-gt-xs="50" layout="column">
             <form name="projectForm">
@@ -176,7 +178,7 @@
                                    ng-click="makeCall(call)">Call
                         </md-button>
                         <md-button ng-disabled="PhoneForm.$invalid" ng-disabled="false" aria-label="Save"
-                                   ng-click="rejectCall()">End
+                                   ng-click="hangUp()">End
                         </md-button>
                     </md-card-actions>
                 </md-card>
@@ -196,6 +198,7 @@
 <script type="text/javascript" src="bower_components/angular-messages/angular-messages.js"></script>
 
 
+<script type="text/javascript" src="js/SIPml-api.js"></script>
 <script type="text/javascript" src="js/DuoWebRtcSip-api.js"></script>
 <script type="text/javascript" src="js/indexController.js"></script>
 <script type="text/javascript" src="js/phoneHandler.js"></script>

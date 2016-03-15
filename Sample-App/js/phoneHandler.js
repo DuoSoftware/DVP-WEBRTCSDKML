@@ -49,11 +49,15 @@
             duoWebPhone.rejectCall();
         };
 
+        var hangUp = function (e) {
+            duoWebPhone.HangUp();
+        };
         return {
             makeCall: makeCall,
             acceptCall: acceptCall,
             rejectCall: rejectCall,
-            initiatePhone: initiatePhone
+            initiatePhone: initiatePhone,
+            hangUp:hangUp,
         };
 
     };
